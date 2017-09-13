@@ -10,8 +10,13 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
+        
         <?php
-        // put your code here
+            $numero = 13; //int
+            $nombre = "Jesus"; //string
+            $importe = 1521.23; //bolean
+            
+            echo "El numero es $numero y el nom es $nombre";
         ?>
     </body>
 </html>
