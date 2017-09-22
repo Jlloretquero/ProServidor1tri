@@ -50,11 +50,12 @@ echo "<br>";
 
 //Com possaro en una taba :
 echo "<table border='1'>";
-echo "<tr><td>Apellidos</td><td>Nombre</td><td>Poblacion</td><td>CLub</td></tr>";
+echo "<tr><td></td><td></td><td>Apellidos</td><td>Nombre</td><td>Poblacion</td><td>CLub</td></tr>";
 while($fila = mysqli_fetch_array($result)){
+$id = $fila["IdParticipante"];
 echo "<tr>"; 
-echo "<td> Editar</td>";
-echo "<td> Borrar</td>";
+echo "<td> <a href='Act1BaseDadesEditar.php?id=$id'>Editar</a></td> ";
+echo "<td> <a href='Act1BaseDadesBorrar.php?id=$id'>Borrar</a></td> ";
 echo "<td>".$fila["Nombre"]."</td>";
 echo "<td>".$fila["Apellidos"]."</td>";
 echo "<td>".$fila["Poblacion"]."</td>";
