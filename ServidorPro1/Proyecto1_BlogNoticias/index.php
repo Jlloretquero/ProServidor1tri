@@ -26,8 +26,18 @@
                  
             }
             img{
-                padding:1px;
+                padding:4px;
                 
+            }
+            
+            a{
+                color: black;
+            }
+            tr:nth-child(odd){
+                background-color: #F0EBE7;
+            }
+            table{
+                width: 100%;
             }
         </style>
     </head>
@@ -36,7 +46,7 @@
     <body>
         <div class="container">
             <hr/>
-            <a href="BaseDatos_FormCrear.php"><button value="crear" >Crear noticia</button></a>
+            <a href="BaseDatos_FormCrear.php"><img style="width:50px; height:50px" src="blog/crear.png"></a><b>  AÑADIR ENTRADA AL BLOG</b>
             <hr/>
             <?php
             include("BaseDatos.php");
@@ -45,8 +55,8 @@
             $result = $db->consultar($query);
 
             echo "<table  style='text-align:center'>";
-            echo "<th style='text-align:center'>Noticia</th>";
-            echo "<th style='text-align:center'>Imagen</th>";
+            
+            
             
             while ($fila = mysqli_fetch_array($result)) {
                 $id = $fila["post_id"];
