@@ -90,6 +90,11 @@ class crud {
                     <td><?php echo $fila["Apellidos"]; ?></td>
                     <td><?php echo $fila["Nombre"]; ?></td>
                     <td><?php echo $fila["Poblacion"]; ?></td>
+                    <td align='center'>
+                        <a href="edit-data.php?edit_id=<?php echo $fila["IdParticipante"]; ?>">
+                            <i class="glyphicon glyphicon-edit"></i>
+                        </a>
+                        </td>
                 </tr>
 
 
