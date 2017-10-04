@@ -13,9 +13,9 @@ $db_name = "carreras";
 $dsn = "mysql:host=$db_host;dbname=$db_name";
 $options = array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 try {
-    $db_con = new POD($dsn,$db_user,$db_pass,$options);
-            
-} catch (Exception $exc) {
-    echo $exc->getTraceAsString();
+    $db_con = new PDO($dsn, $db_user, $db_pass, $options);
+} catch (Exception $ex) {
+    echo $ex->getMessage();
 }
-
+include('class_crud.php');
+$crud = new Crud($db_con);
