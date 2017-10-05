@@ -1,5 +1,4 @@
 <?php
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -46,15 +45,15 @@ class crud {
     public function update($id, $apellidos, $nombre, $poblacion) {
 
         try {
-
-            $sql = "UPDATE participantes SET Apellidos =:apellidos,Nombre=:nombre,"
+            echo $id;
+            $sql = "UPDATE participantes SET Apellidos=:apellidos,Nombre=:nombre,"
                     . "Poblacion=:poblacion"
-                    . "WHERE IdParticipante =:id";
+                    . " WHERE IdParticipante=:id";
             $sentencia = $this->db->prepare($sql);
-            $sentencia->bindparam(":apellidos,$apellidos");
-            $sentencia->bindparam(":nombre,$nombre");
-            $sentencia->bindparam(":poblacion,$poblacion");
-            $sentencia->bindparam(":id,$id");
+            $sentencia->bindparam(":apellidos",$apellidos);
+            $sentencia->bindparam(":nombre",$nombre);
+            $sentencia->bindparam(":poblacion",$poblacion);
+            $sentencia->bindparam(":id",$id);
 
             $sentencia->execute();
             return true;
@@ -91,18 +90,22 @@ class crud {
                     <td><?php echo $fila["Nombre"]; ?></td>
                     <td><?php echo $fila["Poblacion"]; ?></td>
                     <td align='center'>
-                        <a href="edit-data.php?edit_id=<?php echo $fila["IdParticipante"]; ?>">
+                        <a href="edit_data.php?edit_id=<?php echo $fila["IdParticipante"]; ?>">
                             <i class="glyphicon glyphicon-edit"></i>
                         </a>
-                        </td>
+                    </td>
+
+                    <td align='center'>
+                        <a href="delete_data.php?delete_id=<?php echo $fila["IdParticipante"]; ?>">
+                            <i class="glyphicon glyphicon-remove-circle"></i>
+                        </a>
+                    </td>
                 </tr>
 
 
                 <?php
-
             }
-        }
-        else{
+        } else {
             echo "<tr><td>No hay registros</td></tr>";
         }
     }
