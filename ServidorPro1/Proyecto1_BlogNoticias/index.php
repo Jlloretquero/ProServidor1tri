@@ -9,8 +9,9 @@
                 background-color: #900C3F;
                 padding: 10px;
                 box-shadow: 0px 5px; 
+               
             }
-            
+          
             footer{
                 text-align: center;
                 background-color: #900C3F;
@@ -19,6 +20,7 @@
             }
             body{
                 background-color: #DAC8B8;
+                
                 
             }
             .container{
@@ -39,9 +41,11 @@
             table{
                 width: 100%;
             }
+            
         </style>
     </head>
     <header><h1>BLOG DE NOTICIAS</h1></header>
+    
     <hr/>
     <body>
         <div class="container">
@@ -66,7 +70,7 @@
                 echo "<th/>";
                 echo "<td><img style='width:200px; height:100px' src='blog/" . $fila["post_image"] . "'></td>";
                 echo "<th/>";
-                echo "<td> <a href='Act1BaseDadesEditar.php?id=$id'><img style='width:50px; height:50px' src='blog/editar.png'></a></td>";
+                echo "<td> <a href='BaseDatos_Editar.php?id=$id'><img style='width:50px; height:50px' src='blog/editar.png'></a></td>";
                 echo "<th/>";
                 echo "<td> <a href='BaseDatos_Borrar.php?id=$id'><img style='width:50px; height:50px' src='blog/borrar.png'></a></td> ";
                 echo "<th/>";
