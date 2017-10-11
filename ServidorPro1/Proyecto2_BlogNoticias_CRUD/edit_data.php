@@ -72,7 +72,7 @@ if (isset($_GET["edit_id"])){
             
             <tr>
                 <td>text</td>
-                <td><input type="area" class="form-control" name="text" value="<?php echo $post_body; ?>" /></td>
+                <td><textarea class="form-control" name="text"><?php echo $post_body; ?></textarea></td>
             </tr>
             
             <tr>
