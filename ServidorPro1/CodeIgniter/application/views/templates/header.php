@@ -1,6 +1,7 @@
 <html>
         <head>
-                <title>CodeIgniter Tutorial</title>
+                <title><?php echo $title; ?></title>
+                <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css">
         </head>
         <body>
 
